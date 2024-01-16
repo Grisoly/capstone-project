@@ -1,0 +1,23 @@
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  background-color: #EDEFEE;
+  padding: 4rem;
+}
+
+.about-text {
+  grid-column: 1;
+}
+
+.about-images {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 100%;
+  height: auto;
+}

@@ -1,21 +1,19 @@
-import React, { Component, Fragment } from "react";
+import React, {Fragment } from "react";
 import "./App.css";
-import Nav from "./Nav";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
-class App extends Component {
-	render() {
-		return (<Fragment>
-					<Nav />
-					<Header />
-					<Main />
-					<Footer />
-					</Fragment>
-				
-		);
-	}
+function App() {
+	return (
+		<Fragment>
+			<Nav />
+			<Header />
+			<Main />
+			<Footer />
+		</Fragment>
+	);
 }
 
 export default App;

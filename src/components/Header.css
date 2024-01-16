@@ -1,0 +1,41 @@
+.presentation {
+  padding: 2rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: #495E57;
+}
+ .presentation-text{
+  color: white;
+
+
+ }
+
+.presentation img {
+  border-radius: 1rem;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: -1rem; 
+}
+
+
+@media only screen and (min-width: 768px) {
+  .presentation {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .presentation img {
+    margin-bottom: -4.375rem; 
+  }
+}
+
+.reserve-button {
+  grid-column: 1 / span 2;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}

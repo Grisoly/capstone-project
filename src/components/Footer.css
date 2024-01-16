@@ -1,0 +1,34 @@
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 4rem;
+  background-color: #495E57;
+  color: white;
+}
+
+.footer-logo img {
+  width: 30%;
+  height: auto;
+}
+
+.footer-navigation,
+.footer-contact,
+.footer-social {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}

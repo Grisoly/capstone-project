@@ -1,0 +1,25 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-color: #495E57;
+  padding: 4rem;
+}
+
+.testimonial-card {
+  text-align: center;
+  background-color: #EDEFEE;
+  padding: 20px;
+  border-radius: 16%;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  margin: 0;
+}

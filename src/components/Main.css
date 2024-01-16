@@ -1,0 +1,9 @@
+main {
+  display: grid;
+  grid-template-areas:
+    'hero'
+    'highlights'
+    'testimonials'
+    'about';
+  gap: 20px;
+}
