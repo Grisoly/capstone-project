@@ -1,8 +1,9 @@
-import react from "react";
+import React from "react";
+import { Fragment } from "react";
 import "./DishCard.css";
 
-const DishCard = ({ special }) => {
-	return (
+function DishCard({ special }) {
+	return (<Fragment>
 		<article className="dish-card">
 			<div className="dish-card-picture">
 				<img src={special.picture} alt={special.recipe} />
@@ -16,7 +17,8 @@ const DishCard = ({ special }) => {
 				<a>Order a delivery</a>
 			</div>
 		</article>
+		</Fragment>
 	);
-};
+}
 
 export default DishCard;

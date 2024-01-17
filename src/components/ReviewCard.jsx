@@ -1,8 +1,9 @@
-import react from "react";
+import React from "react";
+import { Fragment } from "react";
 import "./ReviewCard.css";
 
 const ReviewCard = ({ customer }) => {
-	return (
+	return (<Fragment>
 		<article className="review-card">
 			<div>
 				<img src={customer.picture} alt={customer.fullName} />
@@ -16,6 +17,7 @@ const ReviewCard = ({ customer }) => {
 				<p>{customer.review}</p>
 			</div>
 		</article>
+		</Fragment>
 	);
 };
 export default ReviewCard;
