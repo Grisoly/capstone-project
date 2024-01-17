@@ -1,6 +1,6 @@
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:1fr;
   gap: 20px;
   background-color: #495E57;
   padding: 4rem;
@@ -22,4 +22,10 @@
 
 .testimonial-card p {
   margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .testimonials {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

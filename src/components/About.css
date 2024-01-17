@@ -12,6 +12,7 @@
   color: #495f57 ;
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
+  max-width: 65ch;
 }
 
 .about h2 {

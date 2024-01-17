@@ -5,12 +5,21 @@
   background-color: #FFFFFF;
   padding: 4rem;
 }
+.specials.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 button {
   background-color: #f4ce14;
   border-radius: 16px;
   color: #495e57;
   font-weight: bold;
   padding: .5rem 1rem;
+  font-family: 'Karla',sans-serif;
+  cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
   .highlights {

@@ -3,7 +3,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2%;
-  background: #FFFFFF; 
+  background: #FFFFFF;
+  box-sizing: border-box;
 }
 nav img {
   max-width: 15rem;
@@ -14,7 +15,7 @@ nav ul {
   margin: 0;
   padding: 0;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 nav ul li {
@@ -25,4 +26,26 @@ nav ul li a {
   text-decoration: none;
   color: #495e57;
   display: flex;
+  transition: color 0.3s, background-color 0.3s;
+}
+nav ul li:not(.nav-bar-logo) a:hover {
+  color: #edefee;
+  background-color: #495e57;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
 }

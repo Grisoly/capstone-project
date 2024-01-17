@@ -32,8 +32,10 @@ const specials = [
 const Specials = () => {
 	return (
 		<section className="highlights">
-			<div>
+			<div className="specials-title">
 				<h2>Our special dishes this week</h2>
+			</div>
+			<div>
 				<button>Order Online</button>
 			</div>
 

@@ -41,7 +41,7 @@ function Footer() {
 				</ul>
 			</div>
 			<div className="footer-social">
-				<p>FOLLOW US</p>
+				<p>CONNECT</p>
 				<br></br>
 				<ul>
 					<li>Facebook</li>

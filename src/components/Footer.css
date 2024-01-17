@@ -34,3 +34,6 @@
     color: white;
   }
 }
+ul li a:hover {
+  color: #495E57;
+  background-color: #edefee;}

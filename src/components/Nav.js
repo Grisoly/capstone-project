@@ -7,7 +7,7 @@ function Nav() {
 			<ul className="nav-bar-links">
 				<li className="nav-bar-logo">
 					<a href="/">
-						<img src="images/logo.png" alt="logo" width="200rem" />
+						<img src="images/logo.png" alt="logo" />
 					</a>
 				</li>
 
