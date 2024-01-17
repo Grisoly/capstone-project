@@ -1,5 +1,7 @@
 import React from "react";
 import "./About.css";
+import cooks1 from "../assets/MarioAdrian-A.jpg";
+import cooks2 from "../assets/MarioAdrian-B.jpg";
 
 function About() {
 	return (
@@ -14,16 +16,8 @@ function About() {
 				</p>
 			</div>
 			<div className="about-images">
-				<img
-					className="image1"
-					src="../images/MarioAdrian-A.jpg"
-					alt="Our cooks smiling"
-				/>
-				<img
-					className="image2"
-					src="../images/MarioAdrian-B.jpg"
-					alt="Our cooks smiling"
-				/>
+				<img className="image1" src={cooks1} alt="Our cooks smiling" />
+				<img className="image2" src={cooks2} alt="Our cooks smiling" />
 			</div>
 		</section>
 	);

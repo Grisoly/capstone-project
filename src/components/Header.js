@@ -1,12 +1,13 @@
 import React from "react";
 import "./Header.css";
+import restaurant from "../assets/restaurantfood.jpg";
 
 function Header() {
 	return (
 		<header>
 			<section className="presentation">
 				<div className="presentation-text">
-					<h2>Little Lemon</h2>
+					<h1>Little Lemon</h1>
 					<h3>Chicago</h3>
 					<p>
 						We are a family owned Mediterranean restaurant, focused on
@@ -16,7 +17,7 @@ function Header() {
 				</div>
 
 				<div className="presentation-image">
-					<img src="../images/restaurantfood.jpg" alt="Restaurant" />
+					<img src={restaurant} alt="Restaurant" />
 				</div>
 			</section>
 		</header>

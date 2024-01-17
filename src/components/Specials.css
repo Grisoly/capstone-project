@@ -2,8 +2,15 @@
   display: grid;
   grid-template-columns:1fr ;
   gap: 20px;
-  background-color: #EDEFEE;
+  background-color: #FFFFFF;
   padding: 4rem;
+}
+button {
+  background-color: #f4ce14;
+  border-radius: 16px;
+  color: #495e57;
+  font-weight: bold;
+  padding: .5rem 1rem;
 }
 @media only screen and (min-width: 768px) {
   .highlights {
@@ -12,13 +19,3 @@
 }
 
 
-.menu-card {
-  text-align: center;
-  border-radius: 16%;
-}
-
-.menu-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 16%;
-}

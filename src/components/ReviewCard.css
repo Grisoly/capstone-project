@@ -1,0 +1,21 @@
+
+.review-card {
+  grid-column: auto;
+  min-height: 13rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.review-card img {
+  width: 8rem;
+  margin: 0 auto 1rem auto;
+  display: flex;
+}
+.rating,
+.review-card-name,
+.review-card-text {
+  text-align: center;
+  padding:0.3rem
+  }

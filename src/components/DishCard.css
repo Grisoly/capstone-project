@@ -1,0 +1,57 @@
+.dish-card {
+  grid-column: auto;
+  grid-row: 2;
+  min-height: 30rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #edefee;
+
+}
+
+.dish-card-picture img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  height: 12rem;
+}
+
+.dish-card-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.dish-card-title,
+.dish-card-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.dish-card-title h3{
+  font-size: 1rem;
+  
+}
+
+.dish-card-title span {
+  color: #ee9972;
+  font-weight: bold;
+}
+
+.dish-card-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dish-card-body a {
+  font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .dish-card {
+    grid-row: auto;
+  }
+  }

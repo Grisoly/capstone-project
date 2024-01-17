@@ -10,8 +10,10 @@
 }
 
 .footer-logo img {
-  width: 30%;
+  width: 5rem;
+  min-width: 5rem;
   height: auto;
+  border-radius: 0px;
 }
 
 .footer-navigation,

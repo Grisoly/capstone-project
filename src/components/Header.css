@@ -1,5 +1,6 @@
 .presentation {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -8,18 +9,37 @@
 }
  .presentation-text{
   color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  
 
-
+ }
+ .presentation h1 {
+  color: #f4ce14;
+  font-size: 3rem;
+  font-family: 'Markazi Text', sans-serif;
+ }
+ .presentation h3 {
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 2.5rem;
  }
 
 .presentation img {
   border-radius: 1rem;
-  height: auto;
+  height: 30rem;
+  justify-self: end;
   object-fit: cover;
-  width: 100%;
-  margin-bottom: -1rem; 
+  width: 90%;
+  margin-bottom: -4rem;
+  grid-column: 2;
 }
-
+.reserve-button{
+    background-color: #f4ce14;
+    border-radius: 16px;
+    color: #495e57;
+    font-weight: bold;
+    padding: .5rem 1rem;
+}
 
 @media only screen and (min-width: 768px) {
   .presentation {
@@ -31,11 +51,3 @@
   }
 }
 
-.reserve-button {
-  grid-column: 1 / span 2;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}

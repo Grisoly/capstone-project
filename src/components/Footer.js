@@ -8,7 +8,7 @@ function Footer() {
 				<img src="../images/logo-white.png" alt="Logo" />
 			</div>
 			<div className="footer-navigation">
-				<p>SITEMAP</p>
+				<p>LINKS</p>
 				<br></br>
 				<ul>
 					<li>
@@ -32,7 +32,7 @@ function Footer() {
 				</ul>
 			</div>
 			<div className="footer-contact">
-				<p>CONTACT US</p>
+				<p>CONTACT</p>
 				<br></br>
 				<ul>
 					<li>Address</li>

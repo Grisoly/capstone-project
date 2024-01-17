@@ -3,12 +3,18 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2%;
-  background: #EDEFEE; 
+  background: #FFFFFF; 
 }
-
+nav img {
+  max-width: 15rem;
+}
 nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
 }
 
 nav ul li {
@@ -17,5 +23,6 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: #495e57;
+  display: flex;
 }

@@ -2,12 +2,26 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
-  background-color: #EDEFEE;
+  background-color: #FFFFFF;
   padding: 4rem;
 }
 
-.about-text {
+.about-text p {
+  padding-top: 1.5rem;
   grid-column: 1;
+  color: #495f57 ;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+.about h2 {
+  color: #f4ce14;
+  font-size: 3rem;
+  font-family: 'Markazi Text', sans-serif;
+}
+.about h3 {
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 2.5rem;
 }
 
 .about-images {
@@ -18,6 +32,6 @@
 }
 
 .about-images img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
