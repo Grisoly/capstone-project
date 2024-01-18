@@ -48,3 +48,41 @@ test("BookingTableForm can be submitted with customer details", async () => {
 		occasion: "Anniversary",
 	});
 });
+test("HTML5 validation attributes are applied to date input", () => {
+	render(<BookingTableForm />);
+	const dateInput = screen.getByLabelText(/Choose date/i);
+	expect(dateInput).toHaveAttribute("type", "date");
+	expect(dateInput).toHaveAttribute("required");
+});
+
+test("HTML5 validation attributes are applied to time select", () => {
+	render(<BookingTableForm />);
+	const timeSelect = screen.getByLabelText(/Choose time/i);
+	expect(timeSelect).toHaveAttribute("required");
+});
+
+test("HTML5 validation attributes are applied to guests input", () => {
+	render(<BookingTableForm />);
+	const guestsInput = screen.getByLabelText(/Number of guests/i);
+	expect(guestsInput).toHaveAttribute("type", "number");
+	expect(guestsInput).toHaveAttribute("min", "1");
+	expect(guestsInput).toHaveAttribute("max", "10");
+	expect(guestsInput).toHaveAttribute("required");
+});
+
+test("HTML5 validation attributes are applied to occasion select", () => {
+	render(<BookingTableForm />);
+	const occasionSelect = screen.getByLabelText(/Occasion/i);
+	expect(occasionSelect).toHaveAttribute("required");
+});
+test("isValidGuests returns true for valid input", () => {
+	const validInput = 5;
+	const isValid = isValidGuests(validInput);
+	expect(isValid).toBe(true);
+});
+
+test("isValidGuests returns false for invalid input", () => {
+	const invalidInput = 15;
+	const isValid = isValidGuests(invalidInput);
+	expect(isValid).toBe(false);
+});

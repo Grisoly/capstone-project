@@ -13,7 +13,9 @@ function Header() {
 						We are a family owned Mediterranean restaurant, focused on
 						traditional recipes served with a modern twist.
 					</p>
-					<button className="reserve-button">Reserve a Table</button>
+					<button className="reserve-button" aria-label="On Click">
+						Reserve a Table
+					</button>
 				</div>
 
 				<div className="presentation-image">

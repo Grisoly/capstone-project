@@ -127,6 +127,7 @@ function BookingTableForm({ submitForm }) {
 					className="button-reservation"
 					type="submit"
 					value="Make Your reservation"
+					aria-label="On Click"
 				/>
 			</form>
 		</div>

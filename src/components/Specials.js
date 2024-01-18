@@ -36,7 +36,7 @@ const Specials = () => {
 				<h2>Our special dishes this week</h2>
 			</div>
 			<div>
-				<button>Order Online</button>
+				<button aria-label="On Click">Order Online</button>
 			</div>
 
 			{specials.map((special, recipe) => (
