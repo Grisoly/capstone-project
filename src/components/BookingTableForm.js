@@ -30,7 +30,7 @@ const updateTimes = async (dispatch, selectedDate) => {
 	}
 };
 
-function BookingTableForm() {
+function BookingTableForm({ submitForm }) {
 	const [resDate, setResDate] = useState("");
 	const [resTime, setResTime] = useState("");
 	const [guests, setGuests] = useState(1);
@@ -42,8 +42,6 @@ function BookingTableForm() {
 		[],
 		initializeTimes
 	);
-	const navigate = useNavigate();
-
 	useEffect(() => {
 		const fetchAvailableTimes = async () => {
 			const times = await initializeTimes();
@@ -52,7 +50,7 @@ function BookingTableForm() {
 		fetchAvailableTimes();
 	}, []);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const selectedSlot = `${resDate} ${resTime}`;
 		if (bookedSlots.includes(selectedSlot)) {
@@ -68,12 +66,17 @@ function BookingTableForm() {
 		setGuests(1);
 		setOccasion("Anniversary");
 
-		navigate("/confirmed-booking");
+		submitForm({
+			date: resDate,
+			time: resTime,
+			guests,
+			occasion,
+		});
 	};
 	const handleDateChange = async (e) => {
 		const newlySelectedDate = e.target.value;
 		setResDate(newlySelectedDate);
-		await updateTimes(newlySelectedDate);
+		await updateTimes(dispatch, newlySelectedDate);
 	};
 
 	return (

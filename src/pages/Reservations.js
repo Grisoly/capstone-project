@@ -1,5 +1,6 @@
 import React from "react";
 import BookingTableForm from "../components/BookingTableForm";
+import { useNavigate } from "react-router-dom";
 
 function Reservations() {
 	const [availableTimes, setAvailableTimes] = useState([
@@ -21,9 +22,16 @@ function Reservations() {
 		];
 		setAvailableTimes(newAvailableTimes);
 	};
+	const navigate = useNavigate();
+
+	const submitForm = (formData) => {
+		console.log("Booking summary:", formData);
+		navigate("/confirmed-booking");
+	};
 	return (
 		<div>
 			<BookingTableForm
+				submitForm={submitForm}
 				updateTimes={updateTimes}
 				availableTimes={availableTimes}
 			/>
