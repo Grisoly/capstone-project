@@ -49,12 +49,14 @@ function BookingTableForm() {
 					id="res-date"
 					onChange={handleDateChange}
 					value={resDate}
+					required
 				/>
 				<label htmlFor="res-time">Choose time</label>
 				<select
 					id="res-time"
 					onChange={(e) => setResTime(e.target.value)}
 					value={resTime}
+					required
 				>
 					{availableTimes.map((availableTime) => (
 						<option key={availableTime}>{availableTime}</option>
@@ -69,12 +71,14 @@ function BookingTableForm() {
 					id="guests"
 					onChange={(e) => setGuests(e.target.value)}
 					value={guests}
+					required
 				/>
 				<label htmlFor="occasion">Occasion</label>
 				<select
 					id="occasion"
 					value={occasion}
 					onChange={(e) => setOccasion(e.target.value)}
+					required
 				>
 					<option>Birthday</option>
 					<option>Anniversary</option>
