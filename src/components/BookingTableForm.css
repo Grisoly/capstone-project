@@ -1,0 +1,26 @@
+.container {
+  background-color: #ffffff;
+	text-align: left;
+	margin: 4rem;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+form {
+  display:grid;
+  max-width: 200px;
+  gap: 20px;
+  font-family: 'Karla',sans-serif;
+  
+}
+.button-reservation {
+  background-color: #f4ce14;
+    border-radius: 16px;
+    color: #495e57;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+    font-family: 'Karla',sans-serif;
+    cursor: pointer;
+}

@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import "./Nav.css";
 import Specials from "./Specials";
 import Construction from "./Construction";
+import BookingTableForm from "./BookingTableForm";
 
 function Nav() {
 	return (
@@ -44,7 +45,7 @@ function Nav() {
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/about" element={<About />}></Route>
 				<Route path="/menu" element={<Specials />}></Route>
-				<Route path="/reservations" element={<Construction />}></Route>
+				<Route path="/reservations" element={<BookingTableForm />}></Route>
 				<Route path="/order" element={<Construction />}></Route>
 				<Route path="/login" element={<Construction />}></Route>
 			</Routes>

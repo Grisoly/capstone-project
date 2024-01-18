@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "../assets/logo.png";
 
 function Construction() {
 	return (
 		<div style={styles.container}>
-			<h1 style={styles.title}>Under Construction </h1>
+			<h1 style={styles.title}>We are cooking... </h1>
 			<div>
 				<p style={styles.message}>
 					This page is currently under construction.
