@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import "./Nav.css";
 import Specials from "./Specials";
 import Construction from "./Construction";
+import ConfirmedBooking from "./ConfirmedBooking";
 import BookingTableForm from "./BookingTableForm";
 
 function Nav() {
@@ -48,6 +49,7 @@ function Nav() {
 				<Route path="/reservations" element={<BookingTableForm />}></Route>
 				<Route path="/order" element={<Construction />}></Route>
 				<Route path="/login" element={<Construction />}></Route>
+				<Route path="/confirmed-booking" element={<ConfirmedBooking />} />
 			</Routes>
 		</div>
 	);

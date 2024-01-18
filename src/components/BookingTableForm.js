@@ -1,5 +1,7 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import "../components/BookingTableForm.css";
+import { generateFakeAPI } from "../utils/fakeAPI";
+import { useNavigate } from "react-router-dom";
 
 const timeReducer = (state, action) => {
 	switch (action.type) {
@@ -9,8 +11,23 @@ const timeReducer = (state, action) => {
 			return state;
 	}
 };
-const initializeTimes = () => {
-	return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+const initializeTimes = async () => {
+	try {
+		const today = new Date();
+		const availableTimes = generateFakeAPI(today);
+		return availableTimes;
+	} catch (error) {
+		console.error("Problem available times fetch:", error);
+		return [];
+	}
+};
+const updateTimes = async (dispatch, selectedDate) => {
+	try {
+		const times = await initializeTimes(selectedDate);
+		dispatch({ type: "SET_AVAILABLE_TIMES", payload: times });
+	} catch (error) {
+		console.error("Problem with available times update:", error);
+	}
 };
 
 function BookingTableForm() {
@@ -18,26 +35,45 @@ function BookingTableForm() {
 	const [resTime, setResTime] = useState("");
 	const [guests, setGuests] = useState(1);
 	const [occasion, setOccasion] = useState("Anniversary");
+	const [bookedSlots, setBookedSlots] = useState([]);
+
 	const [availableTimes, dispatch] = useReducer(
 		timeReducer,
 		[],
 		initializeTimes
 	);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const fetchAvailableTimes = async () => {
+			const times = await initializeTimes();
+			dispatch({ type: "SET_AVAILABLE_TIMES", payload: times });
+		};
+		fetchAvailableTimes();
+	}, []);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const selectedSlot = `${resDate} ${resTime}`;
+		if (bookedSlots.includes(selectedSlot)) {
+			alert("This time slot is already booked. Please choose another.");
+			return;
+		}
+
 		console.log(resDate, resTime, guests, occasion);
+		setBookedSlots([...bookedSlots, selectedSlot]);
+
 		setGuests("");
 		setResDate("");
 		setGuests(1);
 		setOccasion("Anniversary");
+
+		navigate("/confirmed-booking");
 	};
-	const handleDateChange = (e) => {
+	const handleDateChange = async (e) => {
 		const newlySelectedDate = e.target.value;
 		setResDate(newlySelectedDate);
-		dispatch({
-			type: "SET_AVAILABLE_TIMES",
-			payload: { date: newlySelectedDate, times: initializeTimes() },
-		});
+		await updateTimes(newlySelectedDate);
 	};
 
 	return (
@@ -58,9 +94,10 @@ function BookingTableForm() {
 					value={resTime}
 					required
 				>
-					{availableTimes.map((availableTime) => (
-						<option key={availableTime}>{availableTime}</option>
-					))}
+					{Array.isArray(availableTimes) &&
+						availableTimes.map((availableTime) => (
+							<option key={availableTime}>{availableTime}</option>
+						))}
 				</select>
 				<label htmlFor="guests">Number of guests</label>
 				<input
