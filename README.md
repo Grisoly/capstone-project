@@ -1,4 +1,4 @@
-# Little lemon restaurant online reservation system
+# Little Lemon restaurant 
 ## Description
 Welcome to the Little Lemon Restaurant Online Reservation System! <br>This is a capstone project for the Meta Front End Development course, developed using React hooks, HTML, and CSS.
 
